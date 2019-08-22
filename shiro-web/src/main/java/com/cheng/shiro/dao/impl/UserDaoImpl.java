@@ -1,5 +1,6 @@
 package com.cheng.shiro.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.cheng.shiro.dao.UserDao;
@@ -15,11 +16,16 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public User getUserByUsername(String username) {
-        return null;
+        User user = new User();
+        user.setUsername("admin");
+        user.setPassword("f6fdffe48c908deb0f4c3bd36c032e72");
+        return user;
     }
 
     @Override
     public List<String> getRolesByUserName(String username) {
-        return null;
+        List<String> list = new ArrayList<>();
+        list.add("admin");
+        return list;
     }
 }
